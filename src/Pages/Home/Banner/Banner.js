@@ -12,24 +12,24 @@ import "swiper/css/scrollbar";
 import './Banner.css'
 
 // import required modules
-import { EffectCoverflow, Pagination, Autoplay,Scrollbar } from "swiper";
+import { EffectCoverflow, Pagination, Autoplay, Scrollbar } from "swiper";
 
 
 const Banner = () => {
 
 
   return (
-    <>
+    <div className="my-slider">
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
         autoplay={true}
-        
+
         slidesPerView={"auto"}
         navigation
         pagination={{ clickable: true }}
-        
+
         coverflowEffect={{
           rotate: 50,
           stretch: 0,
@@ -38,7 +38,7 @@ const Banner = () => {
           slideShadows: true,
         }}
 
-        modules={[EffectCoverflow, Pagination, Autoplay,Scrollbar]}
+        modules={[EffectCoverflow, Pagination, Autoplay, Scrollbar]}
         className="mySwiper "
       >
         <SwiperSlide>
@@ -58,7 +58,7 @@ const Banner = () => {
         </SwiperSlide>
 
       </Swiper>
-    </>
+    </div>
   );
 };
 
